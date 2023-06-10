@@ -118,4 +118,21 @@ public class ContactMethods {
             }
         }
     }
+    public void DeleteContact() {
+        System.out.print("Enter first name to delete contact:- ");
+        String name_to_delete = scanner.next();
+
+        for(int i = 0; i < contactBook.size(); i++) {
+            String search_name_in_arrayList = contactBook.get(i).getFirst_Name();
+
+            if(name_to_delete.equals(search_name_in_arrayList)) {
+                contactBook.remove(i);
+                System.out.println("\ncontact deleted successfully.");
+                break;
+            }
+            else {
+                continue;
+            }
+        }
+    }
 }
